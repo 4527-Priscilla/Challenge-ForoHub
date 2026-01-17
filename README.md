@@ -59,11 +59,24 @@ Para probar la API en Postman o Insomnia, sigue estos pasos:
 
 3) **Configurar Auth:** En las peticiones de tópicos (POST, PUT, DELETE), ve a la pestaña Auth, selecciona Bearer Token y pega tu token.
 
-## 📑 Endpoints Principales
+## 📑 Pruebas en Postman
+### Configuración inicial
+
+1. Abre Postman
+2. Crea una nueva colección llamada "ForoHub API"
+3. Configura la variable de entorno:
+   - **Variable:** `base_url`
+   - **Valor inicial:** `http://localhost:8080`
+     
+Ahora puedes ingresar:
 
 - **Recurso:** Auth    |    **Método:** POST    |    **Endpoint:** /login    |    **Acción:** Inicia sesión y genera JWT.
 - **Recurso:** Foro    |    **Método:** GET    |    **Endpoint:** /topicos    |    **Acción:** Lista 10 tópicos por fecha.
 - **Recurso:** Foro    |    **Método:** POST    |    **Endpoint:** /topicos    |    **Acción:** Crea un tópico (Requiere Auth).
 - **Recurso:** Foro    |    **Método:** PUT    |    **Endpoint:** /topicos/{id}    |    **Acción:** Edita (Solo el autor).
 - **Recurso:** Foro    |    **Método:** DELETE    |    **Endpoint:** /topicos/{id}    |    **Acción:** Elimina (Solo el autor).
+
+<p align="center">
+<img src="assets/Forohub-5.jpg" alt="Imagen ejemplo /login en Postman" width="550">
+</p>
 
