@@ -88,5 +88,9 @@ Ahora puedes ingresar:
 <img src="assets/Forohub-5.jpg" alt="Imagen ejemplo /login en Postman" width="550">
 </p>
 
+<p align="center">---------------------------------------------------------------------------------------------</p>
 
+### Autor
+
+Proyecto desarrollado como parte del programa **Oracle Next Education en Alura LATAM.**
 
