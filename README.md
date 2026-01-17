@@ -84,8 +84,15 @@ Ahora puedes ingresar:
 - **Recurso:** Foro    |    **Método:** PUT    |    **Endpoint:** /topicos/{id}    |    **Acción:** Edita (Solo el autor).
 - **Recurso:** Foro    |    **Método:** DELETE    |    **Endpoint:** /topicos/{id}    |    **Acción:** Elimina (Solo el autor).
 
+Ejemplo de /login:
 <p align="center">
 <img src="assets/Forohub-5.jpg" alt="Imagen ejemplo /login en Postman" width="550">
+</p>
+
+Una vez ingresado el POST, deberías recibir un Token. 
+
+<p align="center">
+<img src="assets/Forohub-6.jpg" alt="Imagen ejemplo /login en Postman" width="550">
 </p>
 
 <p align="center">---------------------------------------------------------------------------------------------</p>
