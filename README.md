@@ -33,6 +33,14 @@ c) **Gestión de Estados:** Los tópicos nacen con el estado NO_RESPONDIDO y pue
 
 d) **Seguridad Stateless:** La sesión no se guarda en el servidor; cada petición es validada mediante el Subject y el Issuer del token JWT.
 
+## 🏠 Estructura de Base de Datos
+
+El esquema se autogenera mediante Flyway al arrancar la app:
+
+**usuarios:** Almacena credenciales seguras (BCrypt).
+
+**topicos:** Almacena la conversación vinculada al usuario.
+
 ## 👮‍♂️ Control de Acceso con JWT 
 
 La API ForoHub utiliza **JSON Web Tokens (JWT)** para controlar el acceso a todos los endpoints. Solo los usuarios autenticados pueden realizar operaciones CRUD en los tópicos.
@@ -79,4 +87,6 @@ Ahora puedes ingresar:
 <p align="center">
 <img src="assets/Forohub-5.jpg" alt="Imagen ejemplo /login en Postman" width="550">
 </p>
+
+
 
