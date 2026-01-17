@@ -21,6 +21,20 @@
 
 - Hibernate/JPA: Mapeo objeto-relacional y consultas personalizadas.
 
+## 📊 Modelo de Datos 
+
+La API se basa en un modelo relacional de dos entidades principales, diseñado para garantizar la integridad referencial y la trazabilidad de los tópicos:
+
+a) **Tabla usuarios:** Almacena las credenciales de acceso. Es la entidad "Padre" en la relación.
+
+b) **Tabla topicos:** Almacena el contenido del foro. Cada registro está vinculado obligatoriamente a un usuario mediante la clave foránea usuario_id.
+
+**Relación:** Se implementó una relación One-to-Many (Uno a Muchos) desde Usuario hacia Topico. Esto significa que un usuario puede ser autor de múltiples hilos de discusión, pero cada hilo pertenece a un único autor.
+
+<p align="center">
+<img src="assets/Forohub-8.jpg" alt="Imagen de diagrama" width="550">
+</p>
+
 ## 🤔 Lógica de Negocio Destacada
 
 El corazón de la aplicación reside en su capa de servicios (TopicoService), la cual implementa reglas de negocio críticas:
