@@ -84,16 +84,24 @@ Ahora puedes ingresar:
 - **Recurso:** Foro    |    **Método:** PUT    |    **Endpoint:** /topicos/{id}    |    **Acción:** Edita (Solo el autor).
 - **Recurso:** Foro    |    **Método:** DELETE    |    **Endpoint:** /topicos/{id}    |    **Acción:** Elimina (Solo el autor).
 
-Ejemplo de /login:
+Ejemplo de /login; Haz clic en Send. La respuesta devolverá un Token.
 <p align="center">
 <img src="assets/Forohub-5.jpg" alt="Imagen ejemplo /login en Postman" width="550">
 </p>
 
-Una vez ingresado el POST, deberías recibir un Token. 
+Copia todo el texto largo (sin las comillas) en Auth, Auth Type Bearer Token.
+Ahora que tienes el token, se puede intentar crear un tópico o ver la lista protegida.
 
 <p align="center">
-<img src="assets/Forohub-6.jpg" alt="Imagen ejemplo /login en Postman" width="550">
+<img src="assets/Forohub-6.jpg" alt="Imagen ejemplo Token en Postman" width="550">
 </p>
+
+Crea otra pestaña en Postman para un método GET o POST (por ejemplo, POST http://localhost:8080/topicos).
+
+<p align="center">
+<img src="assets/Forohub-7.jpg" alt="Imagen ejemplo /topicos en Postman" width="550">
+</p>
+
 
 <p align="center">---------------------------------------------------------------------------------------------</p>
 
