@@ -37,3 +37,11 @@ d) **Seguridad Stateless:** La sesión no se guarda en el servidor; cada petici�
 
 La API ForoHub utiliza **JSON Web Tokens (JWT)** para controlar el acceso a todos los endpoints. Solo los usuarios autenticados pueden realizar operaciones CRUD en los tópicos.
 Para que la API funcione correctamente, configura las siguientes propiedades en tu **application.properties:**
+<p align="center">
+<img src="assets/Forohub-3.jpg" alt="Imagen ejemplo clave reemplazo de MySQL" width="550">
+</p>
+Recuerda que en "spring.datasource.password=TU_CONTRASENA_DE_MYSQL_AQUI!" debes reemplazar la contraseña con la hayas registrado en MySQL. 
+<p align="center">
+<img src="assets/Forohub-4.jpg" alt="Imagen ejemplo clave de MySQL" width="550">
+</p>
+
