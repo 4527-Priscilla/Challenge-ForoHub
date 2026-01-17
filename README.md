@@ -20,3 +20,20 @@
 - MySQL & Flyway: Persistencia y control de versiones de base de datos.
 
 - Hibernate/JPA: Mapeo objeto-relacional y consultas personalizadas.
+
+## 🤔 Lógica de Negocio Destacada
+
+El corazón de la aplicación reside en su capa de servicios (TopicoService), la cual implementa reglas de negocio críticas:
+
+a) **Validación de Duplicados:** Antes de crear o actualizar, el sistema verifica que no exista ya un tópico con el mismo título y mensaje, evitando contenido redundante.
+
+b) **Protección de Recursos:** Solo el autor de un tópico tiene permisos para realizar actualizaciones o eliminaciones. Si otro usuario lo intenta, el sistema lanza una excepción de AccesoNoAutorizado.
+
+c) **Gestión de Estados:** Los tópicos nacen con el estado NO_RESPONDIDO y pueden transicionar según la actividad del foro.
+
+d) **Seguridad Stateless:** La sesión no se guarda en el servidor; cada petición es validada mediante el Subject y el Issuer del token JWT.
+
+## 👮‍♂️ Control de Acceso con JWT 
+
+La API ForoHub utiliza **JSON Web Tokens (JWT)** para controlar el acceso a todos los endpoints. Solo los usuarios autenticados pueden realizar operaciones CRUD en los tópicos.
+Para que la API funcione correctamente, configura las siguientes propiedades en tu **application.properties:**
