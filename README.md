@@ -5,5 +5,5 @@
 <img src="assets/Forohub-1.png" alt="Imagen título Foro Hub" width="500">
 </p>
 <p align="center">
-<img src="assets/Forohub-2.png" alt="Imagen persona en Foro Hub" width="500">
+<img src="assets/Forohub-2.jpg" alt="Imagen persona en Foro Hub" width="500">
 </p>
