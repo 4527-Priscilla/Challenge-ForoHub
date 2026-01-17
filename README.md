@@ -102,6 +102,17 @@ Crea otra pestaña en Postman para un método GET o POST (por ejemplo, POST http
 <img src="assets/Forohub-7.jpg" alt="Imagen ejemplo /topicos en Postman" width="550">
 </p>
 
+👀 **OJO!** Si no quieres estar pegando el token cada vez que expire, puedes hacer esto:
+
+- En Postman, haz clic en tu Colección de peticiones.
+
+- Ve a la pestaña Authorization de la colección.
+
+- Configura ahí el Bearer Token.
+
+- En cada petición individual, asegúrate de que en la pestaña Authorization diga "Inherit auth from parent".
+
+*¡Así, al cambiar el token en un solo lugar, se actualiza en todas las peticiones!*
 
 <p align="center">---------------------------------------------------------------------------------------------</p>
 
