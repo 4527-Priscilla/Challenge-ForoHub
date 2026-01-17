@@ -40,8 +40,30 @@ Para que la API funcione correctamente, configura las siguientes propiedades en 
 <p align="center">
 <img src="assets/Forohub-3.jpg" alt="Imagen ejemplo clave reemplazo de MySQL" width="550">
 </p>
-Recuerda que en "spring.datasource.password=TU_CONTRASENA_DE_MYSQL_AQUI!" debes reemplazar la contraseña con la hayas registrado en MySQL. 
+
+Recuerda que en caso de que tengas registrada una contraseña en MySQL, debes reemplazarla en "spring.datasource.password=TU_CONTRASENA_DE_MYSQL_AQUI!". En la siguiente imagen muestro el lugar en donde se almacena tu contraseña MySQL.
+
 <p align="center">
 <img src="assets/Forohub-4.jpg" alt="Imagen ejemplo clave de MySQL" width="550">
 </p>
+
+Una vez hecho esto, podemos utilizar Postman App para realizar pruebas.
+
+## ℹ️ Guía de Uso con Postman
+
+Para probar la API en Postman o Insomnia, sigue estos pasos:
+
+1) **Login:** Envía un POST a /login con el usuario admin123.
+
+2) **Obtener Token:** Copia el valor del campo token de la respuesta JSON.
+
+3) **Configurar Auth:** En las peticiones de tópicos (POST, PUT, DELETE), ve a la pestaña Auth, selecciona Bearer Token y pega tu token.
+
+## 📑 Endpoints Principales
+
+- **Recurso:** Auth    |    **Método:** POST    |    **Endpoint:** /login    |    **Acción:** Inicia sesión y genera JWT.
+- **Recurso:** Foro    |    **Método:** GET    |    **Endpoint:** /topicos    |    **Acción:** Lista 10 tópicos por fecha.
+- **Recurso:** Foro    |    **Método:** POST    |    **Endpoint:** /topicos    |    **Acción:** Crea un tópico (Requiere Auth).
+- **Recurso:** Foro    |    **Método:** PUT    |    **Endpoint:** /topicos/{id}    |    **Acción:** Edita (Solo el autor).
+- **Recurso:** Foro    |    **Método:** DELETE    |    **Endpoint:** /topicos/{id}    |    **Acción:** Elimina (Solo el autor).
 
