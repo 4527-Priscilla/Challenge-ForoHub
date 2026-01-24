@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "forohub-api-collection",
+		"name": "ForoHub API",
+		"description": "Colección completa de endpoints para la API ForoHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Crear Tópico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Duda sobre Spring Boot\",\n  \"mensaje\": \"¿Cómo configurar correctamente las migraciones con Flyway?\",\n  \"status\": \"NO_RESPONDIDO\",\n  \"autor\": \"Juan Pérez\",\n  \"curso\": \"Spring Boot\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/topicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos"
+					]
+				}
+			}
+		},
+		{
+			"name": "2. Listar Primeros 10 Tópicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos"
+					]
+				}
+			}
+		},
+		{
+			"name": "3. Listar Todos los Tópicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"todos"
+					]
+				}
+			}
+		},
+		{
+			"name": "4. Obtener Tópico por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "5. Actualizar Tópico",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Duda sobre Spring Boot - Actualizada\",\n  \"mensaje\": \"¿Cómo configurar correctamente las migraciones con Flyway? Actualizado\",\n  \"status\": \"SOLUCIONADO\",\n  \"autor\": \"Juan Pérez\",\n  \"curso\": \"Spring Boot\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/topicos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "6. Eliminar Tópico",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "7. Buscar por Curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/curso/Spring Boot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"curso",
+						"Spring Boot"
+					]
+				}
+			}
+		},
+		{
+			"name": "8. Buscar por Autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/autor/Juan Pérez",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"autor",
+						"Juan Pérez"
+					]
+				}
+			}
+		},
+		{
+			"name": "9. Buscar por Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/status/NO_RESPONDIDO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"status",
+						"NO_RESPONDIDO"
+					]
+				}
+			}
+		},
+		{
+			"name": "10. Buscar por Curso y Año",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/buscar?curso=Spring Boot&anio=2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "curso",
+							"value": "Spring Boot"
+						},
+						{
+							"key": "anio",
+							"value": "2024"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "11. Listar con Paginación",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/pagina?page=0&size=5&sort=fechaCreacion,asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"pagina"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "fechaCreacion,asc"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "12. Validación - Campos Obligatorios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/topicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos"
+					]
+				}
+			}
+		},
+		{
+			"name": "13. Validación - Tópico Duplicado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Título duplicado\",\n  \"mensaje\": \"Mensaje duplicado\",\n  \"status\": \"NO_RESPONDIDO\",\n  \"autor\": \"Autor\",\n  \"curso\": \"Curso\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/topicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos"
+					]
+				}
+			}
+		},
+		{
+			"name": "14. Error - ID Inválido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"0"
+					]
+				}
+			}
+		},
+		{
+			"name": "15. Error - Tópico No Encontrado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/topicos/999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topicos",
+						"999"
+					]
+				}
+			}
+		}
+	]
+}
+
